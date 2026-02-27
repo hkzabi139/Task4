@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodFlow AI | Ultra Pro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <div class="bg-glow" id="main-glow"></div>
+
+    <div class="container">
+        <h1>🧠 MoodFlow AI</h1>
+
+        <div class="glass-card">
+            <h3>Mood Stability</h3>
+            <div class="score-container">
+                <svg class="score-svg">
+                    <circle class="score-circle" cx="90" cy="90" r="70"></circle>
+                    <circle id="progress-bar" class="score-progress" cx="90" cy="90" r="70"></circle>
+                </svg>
+                <div class="score-text" id="score-val">50</div>
+            </div>
+            <div id="mood-label" class="status-badge">Analyzing...</div>
+            <p style="margin-top: 15px; color: #94a3b8; font-size: 0.8rem;">Interact with UI to test</p>
+        </div>
+
+        <div class="glass-card">
+            <h3>Real-time Analytics</h3>
+            <canvas id="moodChart"></canvas>
+        </div>
+
+        <div class="glass-card" style="grid-column: span 2;">
+            <h3 style="margin-bottom: 15px;">System Activity Log</h3>
+            <div id="event-log" class="log-box"></div>
+        </div>
+
+        <button class="btn-reset" onclick="resetSim()">Reset Simulation</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

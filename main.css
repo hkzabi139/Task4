@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.bg-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 255, 136, 0.2);
+    filter: blur(150px);
+    z-index: -1;
+    transition: background 1s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    padding: 20px;
+}
+
+.glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    background: linear-gradient(to right, #00ff88, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.score-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+}
+
+.score-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.score-circle {
+    fill: none;
+    stroke: #334155;
+    stroke-width: 8;
+}
+
+.score-progress {
+    fill: none;
+    stroke: #00ff88;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 220;
+    transition: stroke-dashoffset 0.5s ease, stroke 0.5s ease;
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#moodChart {
+    max-height: 250px;
+}
+
+.log-box {
+    height: 250px;
+    overflow-y: auto;
+    text-align: left;
+    scrollbar-width: thin;
+}
+
+.log-item {
+    padding: 10px;
+    border-left: 3px solid #00ff88;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 8px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+}
+
+.btn-reset {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reset:hover {
+    background: #ef4444;
+}
